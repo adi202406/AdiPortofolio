@@ -1,19 +1,25 @@
 body{
   overflow-x: hidden;
 }
+.container{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 .adi {
   font-family: "Silkscreen", sans-serif;
   animation: fadeInUp 2s ease-out;
-  font-size: 3.5em;
+  font-size: 1.8em;
 }
 
 .navbar-brand {
   font-family: "Pirata One", system-ui;
-  
+}
+
+p{
+  font-family: "Cabin", sans-serif;
 }
 
 p.h4{
-  font-family: "Staatliches", sans-serif;
   font-family: "Stick No Bills", sans-serif;
   text-transform: uppercase;
 
@@ -22,6 +28,7 @@ p.h4{
 .jumbotron {
   
 }
+
 
 
 .css{
@@ -38,11 +45,13 @@ p.h4{
 
 
 .active{
-  color: white !important;
-  background-color: #e75128;
+  color: #e4fd03 !important;
+  background-color: #8d94da;
   border-radius: 10px;
-  transition: all 0.25s ease-in-out;
+  transition: background-color .3s ease-in-out !important;
+  box-shadow: 0.7px 0.7px 0.7px rgba(0,0,0,0.5);
 }
+
 
 nav{
  background-color: #02182f;
@@ -50,26 +59,37 @@ nav{
 nav .container a {
   color: white;
 }
-
+nav a:hover{
+ color: #e4fd03 !important;
+}
 nav.scrolled{
   background-color: white;
-  transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 nav.scrolled .container a{
-  transition: color 0.25s ease-in-out;
-  color: black;
+  transition: color 0.3s ease-in-out;
+  color: black ;
+}
+
+nav.scrolled .container a:hover{
+  transition: color 0.3s ease-in-out;
+  color: #e4fd03 !important;
 }
 
 .nav-item{
   margin:5px;
 }
+nav{
+  text-shadow: 0.6px 0.6px 0.6px rgba(0,0,0,0.5);
+}
 
 #typed-text {
   font-family: "Staatliches", sans-serif;
-  letter-spacing: 5px;
-  font-size: 2.5em;
+  letter-spacing: 2px;
+  font-size: 1.3em;
   animation: fadeInUp 1.5s ease-out;
+  margin-top: -10px;
 }
 button .navbar-toggler-icon{
   color: white;
@@ -79,12 +99,12 @@ button .navbar-toggler-icon{
 }
 .svg1{
   position: relative;
-  top: -87px;
-  
+  top: -70px;
+  box-shadow: 5px 0 0 0 rgba(0, 0, 0, 0.3);
 }
 
 .hero{
-  min-width: 450px;
+  min-width: 220px;
 }
 
 .portfolio{
@@ -93,16 +113,34 @@ button .navbar-toggler-icon{
 }
 
 .about-me{
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
-
+.card1{
+  margin-bottom: 50px;
+}
 .my-project-h2{
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 h2{
-  font-family: "Oswald", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+  text-transform: capitalize !important;
+  margin-top:10px !important;
+}
+.tentang-saya{
+  font-family: "Calligraffitti", cursive;
+  letter-spacing: 1px;
+  text-transform: capitalize !important;
+  margin-top:10px !important;
+}
+.progress-bar{
+  font-family: "Nova Mono", monospace;
+}
+
+.skill-text{
+  font-family: "Secular One", sans-serif;
 }
 
 .contact-me{
@@ -121,7 +159,16 @@ h2{
   border-radius: 10px;
   padding: 20px;
   color: white;
+  box-shadow: 5px 5px 5px 
+  rgba(0, 0, 0, 0.3);
 }
+
+.btn-kirim{
+  box-shadow: 2px 2px 2px 
+  rgba(0, 0, 0, 0.3);
+}
+
+
 
     body, html {
       height: 100%;
@@ -165,29 +212,44 @@ h2{
         background-color: #f0f0f0;
         border-radius: 5px;
         overflow: hidden;
+        box-shadow: 1px 1px 1px
+rgba(0, 0, 0, 0.3);
+line-height: 20px;
     }
 
     .progress-bar-fill-html{
         background-color: #e75128;
         height: 20px;
-        animation: progressAnimation 2s ease-in-out;
+        animation: progressAnimation 2s ease-in-out ;
+        width:95% ;
+        box-shadow: 1px 1px 1px 
+  rgba(0, 0, 0, 0.3);
+  line-height: 20px;
     }
       .progress-bar-fill-css {
-
         background-color: #0c72ba;
-
         height: 20px;
         animation: progressAnimation 2s ease-in-out;
+        box-shadow: 1px 1px 1px 
+  rgba(0, 0, 0, 0.3);
+  line-height: 20px;
+    
     }
       .progress-bar-fill-js {
         background-color: #e9a327;
         height: 20px;
         animation: progressAnimation 2s ease-in-out;
+        box-shadow: 1px 1px 1px 
+  rgba(0, 0, 0, 0.3);
+        line-height: 20px;
     }
       .progress-bar-fill-php {
         background-color: #777cb5;
         height: 20px;
         animation: progressAnimation 2s ease-in-out;
+        box-shadow: 1px 1px 1px 
+  rgba(0, 0, 0, 0.3);
+  line-height: 20px;
     }
 
     /* Keyframes for animation */
@@ -216,6 +278,12 @@ h2{
     
     
     
+    @media (min-width: 476px){
+      .svg1{
+        position: relative;
+       top: -100px;
+      }
+    }
     @media (min-width: 576px){
       .svg1{
         position: relative;
@@ -227,29 +295,31 @@ h2{
     @media (min-width: 768px){
       .svg1{
         position: relative;
-       top: -170px;
+       top: -150px;
       }
+      
     }
     
     @media (min-width: 1024px){
       .svg1{
         position: relative;
-       top: -225px;
+       top: -200px;
       }
     }
     
       @media (min-width: 1140px){
       .svg1{
       position: relative;
-       top: -250px;
+       top: -240px;
       }
     }
     
       @media (min-width: 1320px){
       .svg1{
        position: relative;
-       top: -290px;
+       top: -275px;
       }
+      
     }
     
 @media (max-width:576px){
@@ -276,9 +346,6 @@ h2{
           font-size: 1.2em;
         }
         .adi {
-
           font-size: 2.2em;
-          
         }
 }
-

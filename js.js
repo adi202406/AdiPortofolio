@@ -1,25 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Buat fungsi untuk inisialisasi TypeIt dan pengulangan
-    function initializeTypeIt() {
-        new TypeIt("#typed-text", {
-            speed: 100, // Percepat kecepatan animasi
-            waitUntilVisible: true,
-            loop:true,
-            startDelay: 500, // Tambahkan penundaan sebelum animasi dimulai
-            cursor: false, // Matikan kursor untuk membuat animasi lebih halus
-            afterComplete: function (instance) {
-                // Tunggu 2 detik sebelum memulai ulang pengetikan
-                setTimeout(function () {
-                    // Hentikan animasi sebelumnya dan mulai ulang
-                    instance.reset().go();
-                }, 1350); // Ubah angka 2000 menjadi jumlah milidetik penundaan yang Anda inginkan
-            }
-        }).go();
-    }
-
-    // Panggil fungsi untuk inisialisasi TypeIt pertama kali
-    initializeTypeIt();
-});
+    new TypeIt("#typed-text", {
+      strings: ["PROGRAMMING WEB"],
+      speed:150,
+      loop:true
+    })
+    .pause(300)
+    .delete(1)
+    .pause(200)
+    .move(-1)
+    .pause(300)
+    .delete(13)
+    .pause(200)
+    .type("STUD")
+    .pause(200)
+    .move(1)
+    .pause(300)
+    .type("NT")
+    .type(" | ")
+    .pause(350)
+    .type("SMKN")
+    .pause(250)
+    .type("2")
+    .pause(200)
+    .type("surabaya")
+    .pause(200)
+    .go();
+    
+  });
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -71,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".navbar-nav a");
 
   function getScrollOffsets() {
-    return window.innerWidth < 768 ? 100 : 200; // Sesuaikan tinggi scroll dengan ukuran layar
+    return window.innerWidth < 768 ? 100 : 100; // Sesuaikan tinggi scroll dengan ukuran layar
   }
 
   function onScroll() {
@@ -99,20 +106,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
+document.addEventListener("DOMContentLoaded", function(){
+  gsap.from(".progress-bar", {
+scrollTrigger: ".progress-bar",
+width: "0px",
+ease: Power2.easeInOut,
+duration: 3,
+opacity:0.5,
+stagger: 0.1
+});
+})
 
 
